@@ -1,6 +1,8 @@
 module.exports = app => {
     app.get('/atendimentos', (req, res) => res.send('Você está na rota dos atendimentos e está realizando um GET'))
+    app.post('/atendimentos', (req, res) => {
+        console.log(req.body)    
+        res.send('Você está na rota dos atendimentos e está realizando um POST')
+    })
 }
-module.exports = app => {
-    app.post('/atendimentos', (req, res) => res.send('Você está na rota dos atendimentos e está realizando um POST'))
-}
+    
